@@ -1,0 +1,15 @@
+prefix=/pm/php-build-scripts/bin/php7
+exec_prefix=${prefix}
+bindir=/pm/php-build-scripts/bin/php7/bin
+libdir=/pm/php-build-scripts/bin/php7/lib
+includedir=/pm/php-build-scripts/bin/php7/include
+
+zipcmp=/pm/php-build-scripts/bin/php7/bin/zipcmp
+
+Name: libzip
+Description: library for handling zip archives
+Version: 1.8.0
+Libs:  -L${libdir} -lzip
+Libs.private:  -lssl -lcrypto -lz
+Cflags: -I${includedir}
+
